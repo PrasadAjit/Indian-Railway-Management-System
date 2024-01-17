@@ -1,0 +1,79 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| railway            |
+| sys                |
+| trainmng           |
+| xp                 |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use railway;
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_railway |
++-------------------+
+| passengers        |
+| traindetails      |
++-------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc passengers;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Pname         | varchar(20) | YES  |     | NULL    |       |
+| Age           | int         | YES  |     | NULL    |       |
+| Train_no      | varchar(20) | YES  |     | NULL    |       |
+| Destination   | varchar(20) | YES  |     | NULL    |       |
+| Ticket_Amount | int         | YES  |     | NULL    |       |
+| Status        | varchar(20) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> select * from passengers;
++-----------+------+----------+-------------+---------------+---------+
+| Pname     | Age  | Train_no | Destination | Ticket_Amount | Status  |
++-----------+------+----------+-------------+---------------+---------+
+| Shivanand |   66 | 4596     | Goa         |          3000 | conform |
+| Dayanand  |   65 | 5634     | Belagavi    |          1000 | conform |
+| Yashodeep |   62 | 8976     | Jammu       |          4000 | conform |
+| Nisarg    |   67 | 3276     | Pune        |          2000 | conform |
+| Prasad    |   68 | 8790     | ugar        |           500 | conform |
+| Pradeep   |   64 | 3781     | Bhailhongal |           200 | conform |
+| Ashish    |   20 | 8960     | Rayabhag    |           300 | conform |
+| Ravi      |   23 | 5678     | Belagavi    |           200 | conform |
++-----------+------+----------+-------------+---------------+---------+
+8 rows in set (0.00 sec)
+
+mysql> desc traindetails;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| Tname       | varchar(20) | YES  |     | NULL    |       |
+| Tnumber     | varchar(20) | YES  |     | NULL    |       |
+| Source      | varchar(20) | YES  |     | NULL    |       |
+| Destination | varchar(20) | YES  |     | NULL    |       |
+| No_of_seats | varchar(20) | YES  |     | NULL    |       |
+| ac1         | int         | YES  |     | NULL    |       |
+| ac2         | int         | YES  |     | NULL    |       |
+| ac3         | int         | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> select * from traindetails;
++---------------+---------+-----------+---------------+-------------+------+------+------+
+| Tname         | Tnumber | Source    | Destination   | No_of_seats | ac1  | ac2  | ac3  |
++---------------+---------+-----------+---------------+-------------+------+------+------+
+| Goa Express   | 4596    | Miraj     | Goa           | 3000        |   40 |   32 |   35 |
+| Jammu Express | 8976    | Bengaluru | Jammu&kashmir | 7000        |   10 |   19 |   25 |
+| Miraj express | 9906    | Miraj     | Belagavi      | 2000        |   20 |   37 |   22 |
++---------------+---------+-----------+---------------+-------------+------+------+------+
+3 rows in set (0.00 sec)
+
+mysql>
