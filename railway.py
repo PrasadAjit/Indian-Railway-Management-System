@@ -1,7 +1,7 @@
 import pandas as pd
 import time
 import mysql.connector as sql
-conn=sql.connect(host='Localhost',user='root',passwd='Prasad@2002',database='railway')
+conn=sql.connect(host='Localhost',user='root',passwd='Prasad@2003',database='railway')
 if conn.is_connected():
     print('')
     print('')
